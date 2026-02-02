@@ -1,5 +1,6 @@
 
 import React from 'react';
+import logo from '/assets/logo-white.svg'
 
 const Footer: React.FC = () => {
   return (
@@ -7,14 +8,11 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-2">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10">
-                <svg viewBox="0 0 100 100" className="w-full h-full">
-                  <path d="M50 5 L61 35 L95 35 L68 55 L78 85 L50 66 L22 85 L32 55 L5 35 L39 35 Z" fill="#3b82f6" />
-                  <path d="M15 90 Q25 50 45 40 M25 95 Q35 60 48 45 M35 100 Q45 70 51 50" stroke="#facc15" strokeWidth="4" fill="none" strokeLinecap="round" />
-                </svg>
-              </div>
-              <span className="text-3xl font-extrabold tracking-tight">Lightyears</span>
+            <div className="flex items-center mb-6">
+              
+                <img src={logo} className="h-12"/>
+              
+              
             </div>
             <p className="text-blue-100/60 max-w-sm text-lg leading-relaxed mb-8">
               Transforming educational aspirations into world-class achievements. We don't just guide; we light the way.
@@ -44,7 +42,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-4 text-blue-100/60">
               <li>info@lightyears.edu</li>
               <li>+1 (555) 888-2025</li>
-              <li>100 Innovation Plaza,<br />Palo Alto, CA 94301</li>
+              <li>66 Siddeswari Circular Road<br />Dhaka</li>
             </ul>
           </div>
         </div>

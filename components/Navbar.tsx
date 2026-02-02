@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import logo from '/assets/logo.svg'
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,15 +20,10 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         <div className="flex items-center space-x-2">
           {/* Logo Recreation with SVG components for high quality */}
-          <div className="relative w-10 h-10 flex items-center justify-center">
-            <svg viewBox="0 0 100 100" className="w-full h-full">
-              <path d="M50 5 L61 35 L95 35 L68 55 L78 85 L50 66 L22 85 L32 55 L5 35 L39 35 Z" fill="#3b82f6" />
-              <path d="M15 90 Q25 50 45 40 M25 95 Q35 60 48 45 M35 100 Q45 70 51 50" stroke="#facc15" strokeWidth="4" fill="none" strokeLinecap="round" />
-            </svg>
-          </div>
-          <span className={`text-2xl font-extrabold tracking-tight ${isScrolled ? 'text-[#001A3D]' : 'text-[#001A3D]'}`}>
-            Lightyears
-          </span>
+          <div className="relative flex items-center justify-center">
+            <img src={logo} className="h-20"/>
+          </div> 
+          
         </div>
         
         <div className="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-600">
