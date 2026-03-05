@@ -1,11 +1,11 @@
-
-import React from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Services from './components/Services';
-import AIAdvisor from './components/AIAdvisor';
-import Footer from './components/Footer';
-
+import React from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Services from "./components/Services";
+import AIAdvisor from "./components/AIAdvisor";
+import Footer from "./components/Footer";
+import HowItWorks from "./components/HowItWorks";
+import WhyLightyears from "./components/WhyLightyears";
 
 const App: React.FC = () => {
   return (
@@ -13,87 +13,54 @@ const App: React.FC = () => {
       <Navbar />
       <main>
         <Hero />
-        
-        {/* Stats Section */}
-        <section className="bg-white py-12 border-y border-slate-100">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-              <div>
-                <p className="text-4xl font-extrabold text-[#001A3D] mb-1">150+</p>
-                <p className="text-sm font-bold text-slate-500 uppercase">Partner Schools</p>
-              </div>
-              <div>
-                <p className="text-4xl font-extrabold text-[#001A3D] mb-1">$12M+</p>
-                <p className="text-sm font-bold text-slate-500 uppercase">Scholarships Won</p>
-              </div>
-              <div>
-                <p className="text-4xl font-extrabold text-[#001A3D] mb-1">98%</p>
-                <p className="text-sm font-bold text-slate-500 uppercase">Ivy Acceptances</p>
-              </div>
-              <div>
-                <p className="text-4xl font-extrabold text-[#001A3D] mb-1">24/7</p>
-                <p className="text-sm font-bold text-slate-500 uppercase">AI Advisor Online</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <Services />
         <AIAdvisor />
+        <HowItWorks />
+        <Services />
 
-        {/* Testimonials */}
-        <section className="py-24 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-             <h3 className="text-3xl lg:text-5xl font-extrabold text-[#001A3D] mb-16">Stories of Success</h3>
-             <div className="grid md:grid-cols-3 gap-8 text-left">
-               {[
-                 {
-                   name: "Sarah Jenkins",
-                   role: "Stanford Class of '27",
-                   content: "Lightyears helped me find my unique voice. Their essay workshop wasn't just about grammar; it was about self-discovery.",
-                   img: "https://picsum.photos/seed/sarah/100/100"
-                 },
-                 {
-                   name: "David Chen",
-                   role: "Oxford - PPE",
-                   content: "The AI Path Finder initially suggested schools I hadn't considered. Following their roadmap led me to Oxford.",
-                   img: "https://picsum.photos/seed/david/100/100"
-                 },
-                 {
-                   name: "Amara Okoro",
-                   role: "MIT - CS",
-                   content: "The strategic profile building at Lightyears gave me the edge I needed for highly competitive STEM programs.",
-                   img: "https://picsum.photos/seed/amara/100/100"
-                 }
-               ].map((t, i) => (
-                 <div key={i} className="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-all">
-                    <p className="text-slate-600 mb-6 italic leading-relaxed">"{t.content}"</p>
-                    <div className="flex items-center space-x-4">
-                      <img src={t.img} className="w-12 h-12 rounded-full" alt={t.name} />
-                      <div>
-                        <p className="font-bold text-slate-900">{t.name}</p>
-                        <p className="text-sm text-blue-600 font-semibold">{t.role}</p>
-                      </div>
-                    </div>
-                 </div>
-               ))}
-             </div>
-          </div>
-        </section>
+        <WhyLightyears />
 
         {/* CTA Section */}
-        <section className="py-24 bg-blue-600 relative overflow-hidden">
-          <div className="absolute top-0 right-0 p-20 text-white/5 pointer-events-none">
-             <svg className="w-96 h-96" fill="currentColor" viewBox="0 0 100 100">
-               <path d="M50 5 L61 35 L95 35 L68 55 L78 85 L50 66 L22 85 L32 55 L5 35 L39 35 Z" />
-             </svg>
+        <section className="py-32 bg-[#3156ED] relative overflow-hidden">
+          <div className="absolute inset-0 pointer-events-none">
+            {/* Main Animated Star */}
+            <div className="absolute -bottom-32 -right-20 text-white/5">
+              <svg
+                className="w-[500px] h-[500px] animate-float"
+                fill="currentColor"
+                viewBox="0 0 100 100"
+              >
+                {/* Natively rounded (2px radius) 5-pointed star path */}
+                <path d="M50 5.8c.3 0 .6.5.8 1.4L60.5 34.2c.1.4.5.8 1 .8h32.5c.8 0 1.1 1 .4 1.5L68.5 54.4c-.4.3-.5.8-.4 1.3l10 32.7c.3.8-.6 1.5-1.3 1L50.5 66.8c-.3-.2-.7-.2-1 0L22.8 89.4c-.7.5-1.6-.2-1.3-1l10-32.7c.1-.5 0-1-.4-1.3L5.2 36.5c-.7-.5-.4-1.5.4-1.5h32.5c.5 0 .9-.4 1-.8L49.2 6.9c.2-.9.5-1.4.8-1.4z" />
+              </svg>
+            </div>
           </div>
           <div className="max-w-4xl mx-auto px-4 text-center relative z-10 text-white">
-            <h2 className="text-4xl lg:text-6xl font-extrabold mb-8">Ready to take off?</h2>
-            <p className="text-xl text-blue-100 mb-12">Book your free 30-minute initial consultation with our lead advisors today.</p>
-            <button className="px-10 py-5 bg-white text-blue-600 rounded-2xl font-bold text-xl hover:bg-slate-50 transition-all shadow-2xl hover:-translate-y-1 active:scale-95">
-              Secure Your Spot Now
-            </button>
+            <h2 className="header-text mb-6">Ready to take off?</h2>
+            <p className="body-text text-white/60 mb-8">
+              Book your 30-minute initial consultation <br />
+              with our lead advisors today.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+              <a
+                href="tel:+8801732260262"
+                className="px-8 py-4 bg-[#00153A] text-white rounded-full button-text  transition-all  flex items-center justify-center group cursor-pointer"
+              >
+                Book a consultation
+                <svg
+                  className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 7l5 5m0 0l-5 5m5-5H6"
+                  />
+                </svg>
+              </a>
+            </div>
           </div>
         </section>
       </main>

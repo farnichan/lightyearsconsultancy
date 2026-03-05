@@ -2,79 +2,99 @@ import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <footer id="contact" className="bg-[#001A3D] text-white pt-20 pb-10">
+    <footer id="contact" className="bg-[#00153A] text-white pt-32 pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-12 mb-16">
-          <div className="col-span-2">
-            <div className="flex items-center mb-6"></div>
-            <p className="text-blue-100/60 max-w-sm text-lg leading-relaxed mb-8">
+        <div className="grid md:grid-cols-2 gap-16 mb-16">
+          {/* Left column: Brand */}
+          <div>
+            <p className="button-text text-white/50 max-w-sm mb-8">
               Transforming educational aspirations into world-class
               achievements. We don't just guide; we light the way.
             </p>
-            <div className="flex space-x-5">
-              {["Twitter", "LinkedIn", "Instagram"].map((social) => (
-                <a
-                  key={social}
-                  href="#"
-                  className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-blue-600 transition-colors"
-                >
-                  <span className="sr-only">{social}</span>
-                  <div className="w-5 h-5 border border-white/20 rounded-sm"></div>
-                </a>
-              ))}
+            <div className="flex space-x-4">
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Twitter"
+                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#3156ED] hover:border-[#3156ED] transition-all text-white/60 hover:text-white cursor-pointer"
+              >
+                <i className="fa-brands fa-x-twitter text-sm"></i>
+              </a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn"
+                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#3156ED] hover:border-[#3156ED] transition-all text-white/60 hover:text-white cursor-pointer"
+              >
+                <i className="fa-brands fa-linkedin-in text-sm"></i>
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram"
+                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#3156ED] hover:border-[#3156ED] transition-all text-white/60 hover:text-white cursor-pointer"
+              >
+                <i className="fa-brands fa-instagram text-sm"></i>
+              </a>
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Facebook"
+                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#3156ED] hover:border-[#3156ED] transition-all text-white/60 hover:text-white cursor-pointer"
+              >
+                <i className="fa-brands fa-facebook-f text-sm"></i>
+              </a>
             </div>
           </div>
 
-          <div>
-            <h5 className="text-lg font-bold mb-6">Resources</h5>
-            <ul className="space-y-4 text-blue-100/60">
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Success Stories
+          {/* Right column: Contact */}
+          <div className="justify-self-end">
+            <h5 className="button-text font-bold uppercase tracking-widest text-white/40 mb-6">
+              Contact
+            </h5>
+            <ul className="space-y-5">
+              <li className="flex items-start space-x-4">
+                <div className="mt-0.5 w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center flex-shrink-0 text-[#3156ED]">
+                  <i className="fa-solid fa-envelope text-sm"></i>
+                </div>
+                <a
+                  href="mailto:info@lightyearsconsultancy.com"
+                  className="button-text text-white/60 hover:text-white transition-colors cursor-pointer"
+                >
+                  info@lightyearsconsultancy.com
                 </a>
               </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  University Guide
+              <li className="flex items-start space-x-4">
+                <div className="mt-0.5 w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center flex-shrink-0 text-[#3156ED]">
+                  <i className="fa-solid fa-phone text-sm"></i>
+                </div>
+                <a
+                  href="tel:+8801732260262"
+                  className="button-text text-white/60 hover:text-white transition-colors cursor-pointer"
+                >
+                  +880 173 226 0262
                 </a>
               </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Scholarship Hub
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Free Webinars
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h5 className="text-lg font-bold mb-6">Contact</h5>
-            <ul className="space-y-4 text-blue-100/60">
-              <li>info@lightyearsconsultancy.com</li>
-              <li>+8801732260262</li>
-              <li>
-                66 Siddeswari Circular Road
-                <br />
-                Dhaka
+              <li className="flex items-start space-x-4">
+                <div className="mt-0.5 w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center flex-shrink-0 text-[#3156ED]">
+                  <i className="fa-solid fa-location-dot text-sm"></i>
+                </div>
+                <p className="button-text text-white/60">
+                  66 Siddeswari Circular Road Dhaka 1217
+                </p>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="pt-8 border-t border-white/5 flex flex-col md:row-reverse md:flex-row justify-between items-center text-sm text-blue-100/30">
-          <div className="flex space-x-8 mb-4 md:mb-0">
-            <a href="#" className="hover:text-white transition-colors">
-              Privacy Policy
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
-              Terms of Service
-            </a>
-          </div>
-          <p>© 2024 Lightyears Education Consultancy. All rights reserved.</p>
+        <div className="pt-8 border-t border-white/5">
+          <p className="button-text text-white/30 text-center">
+            © 2026 Lightyears Educational Consultancy. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
