@@ -76,7 +76,7 @@ const Footer: React.FC = () => {
                   href="tel:+8801732260262"
                   className="text-sm md:button-text text-white/60 hover:text-white transition-colors cursor-pointer"
                 >
-                  +880 173 226 0262
+                  +880-1732-260262
                 </a>
               </li>
               <li className="flex flex-col md:flex-row items-center md:items-start md:space-x-4 space-y-2 md:space-y-0 text-center md:text-left">
