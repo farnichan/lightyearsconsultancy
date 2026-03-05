@@ -101,20 +101,22 @@ const AIAdvisor: React.FC = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto space-y-6 relative z-10">
+        <div className="max-w-4xl mx-auto space-y-4 md:space-y-6 relative z-10">
           {struggles.map((item, idx) => (
             <div
               key={idx}
-              className="bg-[#FCFBF7] border border-[#ebebeb] p-6 md:p-8 rounded-3xl flex items-center space-x-6 hover:border-[#3156ED] hover:bg-[#FFFFFF] transition-all cursor-pointer group"
+              className="bg-[#FCFBF7] border border-[#ebebeb] p-5 md:p-8 rounded-2xl md:rounded-3xl flex flex-col md:flex-row items-center md:items-start text-center md:text-left space-y-4 md:space-y-0 md:space-x-6 hover:border-[#3156ED] hover:bg-[#FFFFFF] transition-all cursor-pointer group"
             >
-              <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-2xl flex items-center justify-center text-blue-500 shadow-inner border border-[#ebebeb] group-hover:bg-blue-600 transition-all duration-300 group-hover:text-white group-hover:border-[#3156ED]">
+              <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl flex items-center justify-center text-blue-500 shadow-inner border border-[#ebebeb] group-hover:bg-blue-600 transition-all duration-300 group-hover:text-white group-hover:border-[#3156ED]">
                 {item.icon}
               </div>
               <div className="flex-1">
-                <h4 className="body-text font-bold text-[#00153A] mb-1">
+                <h4 className="text-lg md:body-text font-bold text-[#00153A] mb-1">
                   {item.title}
                 </h4>
-                <p className="text-[#00153A]/60 button-text">{item.desc}</p>
+                <p className="text-[#00153A]/60 text-sm md:button-text">
+                  {item.desc}
+                </p>
               </div>
             </div>
           ))}

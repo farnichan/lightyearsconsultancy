@@ -20,12 +20,12 @@ const App: React.FC = () => {
         <WhyLightyears />
 
         {/* CTA Section */}
-        <section className="py-32 bg-[#3156ED] relative overflow-hidden">
+        <section className="py-20 md:py-32 bg-[#3156ED] relative overflow-hidden">
           <div className="absolute inset-0 pointer-events-none">
             {/* Main Animated Star */}
             <div className="absolute -bottom-32 -right-20 text-white/5">
               <svg
-                className="w-[500px] h-[500px] animate-float"
+                className="w-[300px] h-[300px] md:w-[500px] md:h-[500px] animate-float"
                 fill="currentColor"
                 viewBox="0 0 100 100"
               >
@@ -36,11 +36,12 @@ const App: React.FC = () => {
           </div>
           <div className="max-w-4xl mx-auto px-4 text-center relative z-10 text-white">
             <h2 className="header-text mb-6">Ready to take off?</h2>
-            <p className="body-text text-white/60 mb-8">
-              Book your 30-minute initial consultation <br />
+            <p className="text-sm md:body-text text-white/60 mb-8 px-4 md:px-0">
+              Book your 30-minute initial consultation{" "}
+              <br className="hidden md:block" />
               with our lead advisors today.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+            <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 px-6 sm:px-0">
               <a
                 href="tel:+8801732260262"
                 className="px-8 py-4 bg-[#00153A] text-white rounded-full button-text  transition-all  flex items-center justify-center group cursor-pointer"

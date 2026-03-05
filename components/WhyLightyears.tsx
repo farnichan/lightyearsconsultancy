@@ -14,13 +14,12 @@ const WhyLightyears: React.FC = () => {
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth={1.5}
-            d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"
+            d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z M3.6 9h16.8 M3.6 15h16.8 M12 3c-2.4 2.4-3.75 5.6-3.75 9s1.35 6.6 3.75 9M12 3c2.4 2.4 3.75 5.6 3.75 9s-1.35 6.6-3.75 9"
           />
         </svg>
       ),
-      title: "Honest, unbiased advice",
-      desc: "We don't push you toward universities that pay us commissions. We recommend what's genuinely best for you — even if it's a less obvious choice.",
-      footer: "Your goals first. Always.",
+      title: "Your dream destination",
+      desc: "Whether it's the UK, US, Australia, Malaysia, Finland or anywhere in between — we guide applications across the globe.",
     },
     {
       icon: (
@@ -79,19 +78,19 @@ const WhyLightyears: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
           {cards.map((card, idx) => (
             <div
               key={idx}
-              className="bg-[#FCFBF7] p-8 rounded-[2rem] border border-[#ebebeb] flex flex-col h-full hover:border-[#3156ED] transition-all duration-300 group cursor-pointer"
+              className="bg-[#FCFBF7] p-6 md:p-8 rounded-2xl md:rounded-[2rem] border border-[#ebebeb] flex flex-col h-full hover:border-[#3156ED] transition-all duration-300 group cursor-pointer"
             >
-              <div className="w-14 h-14 bg-[#FCFBF7] rounded-2xl flex items-center justify-center text-[#3156ED] mb-4 border border-[#ebebeb] group-hover:bg-[#3156ED] group-hover:text-white group-hover:border-[#3156ED] transition-all duration-300">
+              <div className="w-12 h-12 md:w-14 md:h-14 bg-[#FCFBF7] rounded-xl md:rounded-2xl flex items-center justify-center text-[#3156ED] mb-4 border border-[#ebebeb] group-hover:bg-[#3156ED] group-hover:text-white group-hover:border-[#3156ED] transition-all duration-300">
                 {card.icon}
               </div>
-              <h4 className="body-text font-bold text-[#00153A] mb-2">
+              <h4 className="text-lg md:body-text font-bold text-[#00153A] mb-2">
                 {card.title}
               </h4>
-              <p className="button-text text-[#00153A]/60 flex-grow">
+              <p className="text-sm md:button-text text-[#00153A]/60 flex-grow">
                 {card.desc}
               </p>
             </div>

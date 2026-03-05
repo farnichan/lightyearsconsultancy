@@ -14,20 +14,20 @@ const Hero: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
+          <div className="text-center lg:text-left">
             <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-bold uppercase tracking-wider mb-6">
               <span className="w-2 h-2 rounded-full bg-blue-600 animate-ping"></span>
               <span>Charting your educational future</span>
             </div>
-            <h1 className="text-5xl lg:text-7xl font-extrabold text-[#00153A] leading-[1.1] mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-[#00153A] leading-[1.1] mb-6">
               Journey <span className="text-[#3156ED]">Lightyears</span> Beyond
               Expectations.
             </h1>
-            <p className="body-text text-[#00153A]/60 mb-8 max-w-lg">
+            <p className="body-text text-[#00153A]/60 mb-8 max-w-lg mx-auto lg:mx-0">
               We are dedicated to guiding ambitious students toward the world's
               best institutions. Your potential is infinite; let's map the path.
             </p>
-            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center lg:justify-start">
               <a
                 href="tel:+8801732260262"
                 className="px-8 py-4 bg-[#00153A] text-white rounded-full button-text hover:bg-[#3156ED] transition-all  flex items-center justify-center group cursor-pointer"
@@ -50,8 +50,8 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          <div className="relative">
-            <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl animate-float">
+          <div className="relative mt-8 lg:mt-0">
+            <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl animate-float max-w-md mx-auto lg:max-w-none">
               <img
                 src={heroImg}
                 className="w-full h-full object-cover aspect-[4/5]"
