@@ -84,7 +84,7 @@ const Footer: React.FC = () => {
                   <i className="fa-solid fa-location-dot text-sm"></i>
                 </div>
                 <p className="text-sm md:button-text text-white/60 max-w-[200px] md:max-w-none">
-                  66 Siddeswari Circular Road Dhaka 1217
+                  66 Siddeswari Circular Road, Dhaka 1217
                 </p>
               </li>
             </ul>
