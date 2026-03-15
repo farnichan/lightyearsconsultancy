@@ -65,7 +65,7 @@ const Footer: React.FC = () => {
                   href="mailto:info@lightyearsconsultancy.com"
                   className="text-sm md:button-text text-white/60 hover:text-white transition-colors cursor-pointer"
                 >
-                  info@lightyearsconsultancy.com
+                  lightyearsconsultancy@gmail.com
                 </a>
               </li>
               <li className="flex flex-col md:flex-row items-center md:items-start md:space-x-4 space-y-2 md:space-y-0 text-center md:text-left">
